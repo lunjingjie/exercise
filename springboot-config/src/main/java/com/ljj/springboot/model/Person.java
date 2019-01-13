@@ -1,14 +1,25 @@
 package com.ljj.springboot.model;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.Map;
 
 @Component
 @ConfigurationProperties(prefix = "person")
+@Validated
 public class Person {
 
+    /*
+    * @Value: 1.字面量
+    *         2.${},取配置文件中的值
+    *         3.#{},spEL表达式:spring表达式
+    * @Validated: 对变量值进行校验(JSR303校验)，只适用于@ConfigurationProperties注解
+    * */
+    @Email
     private String name;
     private int age;
     private Map<String, Object> map;

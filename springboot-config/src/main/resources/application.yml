@@ -2,7 +2,7 @@ server:
   port: 9000
 
 person:
-  name: '小明'
+  name: '小明@163.com'
   age: 14
   map:
     k1: v1
