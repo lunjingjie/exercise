@@ -1,0 +1,12 @@
+server:
+  port: 9000
+
+person:
+  name: '小明'
+  age: 14
+  map:
+    k1: v1
+    k2: v2
+  animal:
+    name: '狗'
+    age: 2

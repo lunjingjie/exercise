@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.ljj.springboot.model.Person",
+      "sourceType": "com.ljj.springboot.model.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.ljj.springboot.model.Person",
+      "defaultValue": 0
+    },
+    {
+      "name": "person.animal",
+      "type": "com.ljj.springboot.model.Animal",
+      "sourceType": "com.ljj.springboot.model.Person"
+    },
+    {
+      "name": "person.map",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.ljj.springboot.model.Person"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "com.ljj.springboot.model.Person"
+    }
+  ],
+  "hints": []
+}
