@@ -35,3 +35,9 @@ spring:
   profiles: prod
 server:
   port: 8002
+
+---
+spring:
+  profiles: local
+server:
+  port: 9000
