@@ -2,7 +2,7 @@ server:
   port: 9000
 
 person:
-  name: '小明'
+  name: '小明@163.com'
   age: 14
   map:
     k1: v1
@@ -10,3 +10,19 @@ person:
   animal:
     name: '狗'
     age: 2
+
+# 使用---为yml文件分文档
+spring:
+  profiles:
+    active: prod
+---
+spring:
+  profiles: dev
+server:
+  port: 8001
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8002

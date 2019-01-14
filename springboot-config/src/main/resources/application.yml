@@ -10,3 +10,28 @@ person:
   animal:
     name: '狗'
     age: 2
+
+# 使用---为yml文件分文档
+# 建立profiles多环境3种方式
+# 1.各自单独写一个配置文件或yml文件，指定spring.profiles
+# 2.在yml文件中使用多文档分隔，定义各个环境的参数
+# 激活指定profile
+# 1.在配置文件中指定spring.profiles.active的值
+# 2.在IDE中的edit configuration中的program arugments指定命令参数: --spring.profiles.active=dev，
+# 或在打包成jar文件后，使用命令 java -jar XXX.jar --spring.profiles.active=dev
+# 3.在IDE中的edit configuration中VM options设置JVM参数：-Dspring.profiles.active=dev
+
+spring:
+  profiles:
+    active: prod
+---
+spring:
+  profiles: dev
+server:
+  port: 8001
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8002
